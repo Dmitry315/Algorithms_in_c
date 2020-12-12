@@ -10,11 +10,11 @@ typedef struct Queue {
     Unit *first, *last;
 } Queue;
 
-Queue *create(int length);
-void update(Unit *unit, int value);
-Queue *pop(Queue *q);
-Queue *push(Queue *q, int value);
-int length(Queue *q);
+Queue *createQueue(int length);
+void updateQueue(Unit *unit, int value);
+Queue *popQueue(Queue *q);
+Queue *pushQueue(Queue *q, int value);
+int lengthQueue(Queue *q);
 void freeQueue(Queue *q);
 
 #endif //ALGNSTRUCTS_QUEUE_H

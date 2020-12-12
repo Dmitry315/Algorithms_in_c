@@ -15,18 +15,18 @@ Stack *createStack(int length) {
     return new;
 }
 
-void update(Stack *unit, int value) {
+void updateStack(Stack *unit, int value) {
     unit->value = value;
 }
 
-Stack *push(Stack *top, int value) {
+Stack *pushStack(Stack *top, int value) {
     Stack *new = malloc(sizeof(Stack));
-    update(new, value);
+    updateStack(new, value);
     new->next = top;
     return new;
 }
 
-Stack *pop(Stack *top) {
+Stack *popStack(Stack *top) {
     Stack *new = top->next;
     free(top);
     return new;

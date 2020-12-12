@@ -1,7 +1,7 @@
 #include "queue.h"
 #include <stdlib.h>
 
-Queue *create(int length) {
+Queue *createQueue(int length) {
     Queue *new = malloc(sizeof(Queue));
     new->last = malloc(sizeof(Unit));
     new->last->prev = NULL;
@@ -17,18 +17,18 @@ Queue *create(int length) {
     return new;
 }
 
-void update(Unit *unit, int value) {
+void updateQueue(Unit *unit, int value) {
     unit->value = value;
 }
 
-Queue *pop(Queue *q) {
+Queue *popQueue(Queue *q) {
     Unit *l = q->first;
     q->first = q->first->prev;
     free(l);
     return q;
 }
 
-Queue *push(Queue *q, int value) {
+Queue *pushQueue(Queue *q, int value) {
     Unit *new = malloc(sizeof(Unit));
     new->next = q->last;
     new->next->prev = new;
@@ -38,7 +38,7 @@ Queue *push(Queue *q, int value) {
     return q;
 }
 
-int length(Queue *q) {
+int lengthQueue(Queue *q) {
     int i = 0;
     for (Unit *u = q->last; u != q->last; u = u->next) i++;
     return i;

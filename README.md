@@ -1,22 +1,22 @@
-<h1>Algorithms and data structures in C</h1>
+<h1>Algorithms and data structures in C (need in refactoring)</h1>
 
 <h2>Stack (NOT TESTED)</h2>
 <h3>struct Stack</h3>
 <h3>Stack *createStack(int length);</h3>
-<h3>void update(Stack *unit, int value);</h3>
-<h3>Stack *push(Stack *top, int value);</h3>
-<h3>Stack *pop(Stack *top);</h3>
+<h3>void updateStack(Stack *unit, int value);</h3>
+<h3>Stack *pushStack(Stack *top, int value);</h3>
+<h3>Stack *popStack(Stack *top);</h3>
 <h3>int height(Stack *top);</h3>
 <h3>void freeStack(Stack *top);</h3>
 
 <h2>Queue (NOT TESTED)</h2>
 <h3>struct Queue</h3>
 <h3>struct Unit</h3>
-<h3>Queue *create(int length);</h3>
-<h3>void update(Unit *unit, int value);</h3>
-<h3>Queue *pop(Queue *q);</h3>
-<h3>Queue *push(Queue *q, int value);</h3>
-<h3>int length(Queue *q);</h3>
+<h3>Queue *createQueue(int length);</h3>
+<h3>void updateQueue(Unit *unit, int value);</h3>
+<h3>Queue *popQueue(Queue *q);</h3>
+<h3>Queue *pushQueue(Queue *q, int value);</h3>
+<h3>int lengthQueue(Queue *q);</h3>
 <h3>void freeQueue(Queue *q);</h3>
 
 <h2>Lists (NOT TESTED)</h2>

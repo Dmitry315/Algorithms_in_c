@@ -7,9 +7,9 @@ typedef struct Stack {
 } Stack;
 
 Stack *createStack(int length);
-void update(Stack *unit, int value);
-Stack *push(Stack *top, int value);
-Stack *pop(Stack *top);
+void updateStack(Stack *unit, int value);
+Stack *pushStack(Stack *top, int value);
+Stack *popStack(Stack *top);
 int height(Stack *top);
 void freeStack(Stack *top);
 
