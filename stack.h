@@ -6,9 +6,11 @@ typedef struct Stack {
     struct Stack *next;
 } Stack;
 
-Stack *create(void);
+Stack *createStack(int length);
+void update(Stack *unit, int value);
 Stack *push(Stack *top, int value);
 Stack *pop(Stack *top);
-void free(Stack *top);
+int height(Stack *top);
+void freeStack(Stack *top);
 
 #endif //ALGNSTRUCTS_STACK_H

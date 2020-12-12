@@ -1,12 +1,27 @@
 #include "stack.h"
 #include <stdlib.h>
 
-Stack *create(void) {
-    return malloc(sizeof(Stack));
+Stack *createStack(int length) {
+    Stack *new = malloc(sizeof(Stack));
+    new->next = NULL;
+    new->value = 0;
+    Stack *l = new;
+    for (int i = 1; i < length; i++) {
+        new->next = malloc(sizeof(Stack));
+        new = new->next;
+        new->value = 0;
+        new->next = NULL;
+    }
+    return new;
+}
+
+void update(Stack *unit, int value) {
+    unit->value = value;
 }
 
 Stack *push(Stack *top, int value) {
     Stack *new = malloc(sizeof(Stack));
+    update(new, value);
     new->next = top;
     return new;
 }
@@ -17,7 +32,13 @@ Stack *pop(Stack *top) {
     return new;
 }
 
-void free(Stack *top) {
+int height(Stack *top) {
+    int i = 0;
+    for (Stack *new = top;new != NULL; new = new->next) i++;
+    return i;
+}
+
+void freeStack(Stack *top) {
     Stack *new = top;
     Stack *old;
     while (new != NULL) {

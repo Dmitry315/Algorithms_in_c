@@ -37,14 +37,14 @@ List *push_front(List *lst, int value) {
 }
 
 
-List *search(List *lst, int value) {
+List *searchList(List *lst, int value) {
     List *l = lst;
     for (; (l != NULL) || (l->value != value); l = l->next);
     return l;
 }
 
-List *delete(List *lst, int value) {
-    List *l = search(lst, value);
+List *deleteList(List *lst, int value) {
+    List *l = searchList(lst, value);
     if (l == NULL)
         return lst;
     if (l == lst) {
@@ -59,7 +59,7 @@ List *delete(List *lst, int value) {
     return lst;
 }
 
-void free(List *lst) {
+void freeList(List *lst) {
     List *l = lst;
     while (l != NULL) {
         l = l->next;

@@ -9,8 +9,8 @@ typedef struct List {
 List *createList(int length);
 List *push_front(List *lst, int value);
 List *push_back(List *lst, int value);
-List *search(List *lst, int value);
+List *searchList(List *lst, int value);
 List *delete(List *lst, int value);
-void free(List *lst);
+void freeList(List *lst);
 
 #endif //ALGNSTRUCTS_LIST_H

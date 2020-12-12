@@ -81,15 +81,15 @@ TreeNode *balance(TreeNode *head) {
 }
 
 // search node in tree recursively
-TreeNode *search(TreeNode *node, int key) {
+TreeNode *searchAVL(TreeNode *node, int key) {
     if (node == NULL)
         return NULL;
     if (node->key == key)
         return node;
     if (key < node->key)
-        return search(node->left, key);
+        return searchAVL(node->left, key);
     else
-        return search(node->right, key);
+        return searchAVL(node->right, key);
 }
 
 // add/update node in AVL tree recursively
@@ -119,7 +119,7 @@ TreeNode *removemin(TreeNode *head) {
 }
 
 // delete node from AVL tree
-TreeNode *del(TreeNode *head, int key) {
+TreeNode *deleteAVL(TreeNode *head, int key) {
     if (head == NULL) {
         return head;
     }
@@ -133,9 +133,9 @@ TreeNode *del(TreeNode *head, int key) {
         m->left = l;
         return balance(m);
     } else if (key < head->key) {
-        head->left = del(head->left, key);
+        head->left = deleteAVL(head->left, key);
     } else if (key > head->key) {
-        head->right = del(head->right, key);
+        head->right = deleteAVL(head->right, key);
     }
     return balance(head);
 }
