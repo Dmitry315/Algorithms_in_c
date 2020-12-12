@@ -6,7 +6,7 @@
 <h3>void updateStack(Stack *unit, int value);</h3>
 <h3>Stack *pushStack(Stack *top, int value);</h3>
 <h3>Stack *popStack(Stack *top);</h3>
-<h3>int height(Stack *top);</h3>
+<h3>int heightStack(Stack *top);</h3>
 <h3>void freeStack(Stack *top);</h3>
 
 <h2>Queue (NOT TESTED)</h2>

@@ -32,7 +32,7 @@ Stack *popStack(Stack *top) {
     return new;
 }
 
-int height(Stack *top) {
+int heightStack(Stack *top) {
     int i = 0;
     for (Stack *new = top;new != NULL; new = new->next) i++;
     return i;
