@@ -1,7 +1,3 @@
-//
-// Created by ACER on 05.12.2020.
-//
-
 #ifndef ALGNSTRUCTS_AVL_H
 #define ALGNSTRUCTS_AVL_H
 

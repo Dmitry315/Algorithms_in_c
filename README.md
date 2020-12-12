@@ -1,5 +1,13 @@
 <h1>Algorithms and data structures in C</h1>
 
+<h2>Lists (NOT TESTED)</h2>
+<h3>List *createList(int length);</h3>
+<h3>List *push_front(List *lst, int value);</h3>
+<h3>List *push_back(List *lst, int value);</h3>
+<h3>List *search(List *lst, int value);</h3>
+<h3>List *delete(List *lst, int value);</h3>
+<h3>void free(List *lst);</h3>
+
 <h2>AVL tree</h2>
 <h3>struct TreeNode</h3>
 <h3>void free_tree(TreeNode *node)</h3>
