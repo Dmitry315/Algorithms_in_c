@@ -28,7 +28,7 @@
 <h3>List *deleteList(List *lst, int value);</h3>
 <h3>void freeList(List *lst);</h3>
 
-<h2>AVL tree</h2>
+<h2>AVL tree (NOT TESTED)</h2>
 <h3>struct TreeNode</h3>
 <h3>void free_tree(TreeNode *node);</h3>
 <h3>int height(TreeNode *p);</h3>

@@ -29,7 +29,7 @@ TreeNode *findmax(TreeNode *p) {
 }
 
 // rotations
-TreeNode *RotateLeft(TreeNode *k2) {
+TreeNode *RotateRight(TreeNode *k2) {
     TreeNode *k1;
     // rotate
     k1 = k2->left;
@@ -40,7 +40,7 @@ TreeNode *RotateLeft(TreeNode *k2) {
     return k1;
 }
 
-TreeNode *RotateRight(TreeNode *k1) {
+TreeNode *RotateLeft(TreeNode *k1) {
     TreeNode *k2;
     // rotate
     k2 = k1->right;
@@ -66,15 +66,15 @@ TreeNode *balance(TreeNode *head) {
     int diff = height(head->left) - height(head->right);
     if (diff == 2) {
         if (height(head->left->left) > height(head->left->right))
-            head = RotateLeft(head);
-        else
-            head = DoubleRotateLeft(head);
-    }
-    if (diff == -2) {
-        if (height(head->right->left) < height(head->right->right))
             head = RotateRight(head);
         else
             head = DoubleRotateRight(head);
+    }
+    if (diff == -2) {
+        if (height(head->right->left) < height(head->right->right))
+            head = RotateLeft(head);
+        else
+            head = DoubleRotateLeft(head);
     }
     head->height = max(height(head->left), height(head->right)) + 1;
     return head;
