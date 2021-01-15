@@ -25,7 +25,7 @@ TreeNode *findmin(TreeNode *p) {
 }
 
 TreeNode *findmax(TreeNode *p) {
-    return p->right ? findmin(p->right) : p;
+    return p->right ? findmax(p->right) : p;
 }
 
 // rotations

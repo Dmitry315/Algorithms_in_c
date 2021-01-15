@@ -1,0 +1,8 @@
+//
+// Created by ACER on 12.01.2021.
+//
+
+#ifndef ALGNSTRUCTS_RB_TREE_H
+#define ALGNSTRUCTS_RB_TREE_H
+
+#endif //ALGNSTRUCTS_RB_TREE_H
